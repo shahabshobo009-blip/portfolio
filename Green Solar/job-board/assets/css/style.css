@@ -1,0 +1,25 @@
+:root{--primary:#0b74de;--muted:#6b7280;--max:1000px}
+*{box-sizing:border-box}
+body{font-family:Inter, Arial, sans-serif;margin:0;color:#111}
+.container{max-width:var(--max);margin:0 auto;padding:20px}
+.jb-header{background:var(--primary);color:#fff;padding:14px}
+.jb-row{display:flex;align-items:center;justify-content:space-between}
+.jb-row nav a{color:#fff;margin-left:12px;text-decoration:none}
+.searchbar{display:flex;gap:8px;align-items:center;margin:20px 0}
+.searchbar input, .searchbar select{padding:10px;border-radius:8px;border:1px solid #e3e3e3}
+.jobs-list{display:grid;gap:12px}
+.job-card{background:#fff;padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+.job-card .meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+.btn{background:var(--primary);color:#fff;padding:8px 12px;border:none;border-radius:8px;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--primary);border:1px solid var(--primary)}
+.btn.small{padding:6px 8px}
+.job-actions{display:flex;gap:8px;justify-content:flex-end}
+.post-job-form{max-width:800px;display:grid;gap:10px}
+.post-job-form label{display:block}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,0.5);display:none;align-items:center;justify-content:center}
+.modal .modal-content{background:#fff;padding:20px;border-radius:10px;max-width:500px;width:90%;position:relative}
+.modal .close{position:absolute;right:12px;top:8px;background:transparent;border:0;font-size:20px}
+.muted{color:var(--muted)}
+@media(max-width:700px){
+  .searchbar{flex-direction:column;align-items:stretch}
+}

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JobBoard - Find Jobs</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="jb-header">
+    <div class="container jb-row">
+      <h1>JobBoard</h1>
+      <nav>
+        <a href="index.html">Jobs</a>
+        <a href="post-job.html">Post a Job</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container jb-main">
+    <section class="searchbar">
+      <input id="q" placeholder="Search jobs, e.g. 'Frontend' or 'Marketing'">
+      <select id="type">
+        <option value="">All Types</option>
+        <option>Full-time</option>
+        <option>Part-time</option>
+        <option>Contract</option>
+        <option>Internship</option>
+      </select>
+      <button id="searchBtn" class="btn">Search</button>
+      <button id="clearBtn" class="btn ghost">Clear</button>
+    </section>
+
+    <section class="jobs-list" id="jobsList">
+      <!-- jobs injected here -->
+    </section>
+
+    <template id="job-card">
+      <article class="job-card">
+        <h3 class="title"></h3>
+        <div class="meta"></div>
+        <p class="desc"></p>
+        <div class="job-actions">
+          <a class="view-link btn small" href="#">View</a>
+          <button class="applyBtn btn small">Apply</button>
+        </div>
+      </article>
+    </template>
+  </main>
+
+  <div id="applyModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="close" id="closeApply">×</button>
+      <h3>Apply for Job</h3>
+      <form id="applyForm">
+        <label>Name<input required id="app_name"></label>
+        <label>Email<input required id="app_email" type="email"></label>
+        <label>Message<textarea id="app_msg" rows="4"></textarea></label>
+        <button class="btn" type="submit">Submit Application</button>
+      </form>
+      <p id="applyMsg" class="muted"></p>
+    </div>
+  </div>
+
+  <script src="assets/js/jobs.js"></script>
+</body>
+</html>

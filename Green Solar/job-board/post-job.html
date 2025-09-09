@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Post a Job - JobBoard</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="jb-header">
+    <div class="container jb-row">
+      <h1>JobBoard</h1>
+      <nav>
+        <a href="index.html">Jobs</a>
+        <a href="post-job.html">Post a Job</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Post a Job</h2>
+    <form id="postForm" class="post-job-form">
+      <label>Company<input id="company" required></label>
+      <label>Title<input id="title" required></label>
+      <label>Location<input id="location" placeholder="City, Country"></label>
+      <label>Type
+        <select id="jobType">
+          <option>Full-time</option>
+          <option>Part-time</option>
+          <option>Contract</option>
+          <option>Internship</option>
+        </select>
+      </label>
+      <label>Salary (optional)<input id="salary" placeholder="$"></label>
+      <label>Description<textarea id="description" rows="6" required></textarea></label>
+      <button class="btn" type="submit">Post Job</button>
+      <p id="postMsg" class="muted"></p>
+    </form>
+  </main>
+
+  <script src="assets/js/jobs.js"></script>
+</body>
+</html>
